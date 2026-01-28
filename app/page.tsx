@@ -34,14 +34,30 @@ export default function Home() {
     // 设置加载状态为true
     setIsLoading(true);
     
-    // TODO: 集成实际的订阅API
+    // 集成实际的订阅API
     fetch('/api/subscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email }),
-    }).then(() => {
+    }).then(async (res) => {
+      const data = await res.json();
+      setIsLoading(false);
+      if (res.status === 200) {
+        // 订阅成功，显示成功消息
+        alert(data.message || '订阅成功！');
+        setEmail(''); // 清空输入框
+      } else {
+        // 订阅失败，显示错误消息
+        alert(data.message || '订阅失败，请稍后重试');
+      }
+    }).catch(() => {
+      setIsLoading(false);
+      // 处理网络错误或其他异常情况
+      alert('订阅失败，请检查网络连接或稍后重试');
+    }).finally(() => {
+      setEmail(''); // 清空输入框
       setIsLoading(false);
     });
   };
