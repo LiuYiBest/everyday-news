@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/context';
 // 导入语言切换器组件
 import { LanguageSwitcher } from './components/LanguageSwitcher';
-
+import { toast } from "sonner"
 /**
  * 首页组件
  * 应用的主页面，包含导航栏、英雄区域、订阅表单和功能亮点
@@ -42,20 +42,19 @@ export default function Home() {
       },
       body: JSON.stringify({ email }),
     }).then(async (res) => {
-      const data = await res.json();
       setIsLoading(false);
       if (res.status === 200) {
         // 订阅成功，显示成功消息
-        alert(data.message || '订阅成功！');
+        toast(t('subscribe.success'))
         setEmail(''); // 清空输入框
       } else {
         // 订阅失败，显示错误消息
-        alert(data.message || '订阅失败，请稍后重试');
+        toast(t('subscribe.error'))
       }
     }).catch(() => {
       setIsLoading(false);
       // 处理网络错误或其他异常情况
-      alert('订阅失败，请检查网络连接或稍后重试');
+      toast(t('subscribe.error'))
     }).finally(() => {
       setEmail(''); // 清空输入框
       setIsLoading(false);

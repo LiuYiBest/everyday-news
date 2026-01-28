@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n/context";
 // 导入全局样式文件
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 
 /**
  * 配置Geist无衬线字体
@@ -70,6 +71,7 @@ export default function RootLayout({
           {/* 渲染子组件（页面内容） */}
           {children}
         </I18nProvider>
+        <Toaster position="top-center" />
       </body>
     </html>
   );
