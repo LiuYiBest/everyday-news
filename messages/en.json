@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Daily Briefs of",
+    "titleHighlight": "AI",
+    "description": "Discover the latest news and insights in the world of AI. Stay updated with the latest developments and trends in artificial intelligence."
+  },
+  "subscribe": {
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "loading": "Subscribing..."
+  },
+  "features": {
+    "rss": {
+      "title": "RSS Subscription",
+      "description": "Integrate multiple RSS sources, automatically collect the latest news"
+    },
+    "summary": {
+      "title": "AI Summary",
+      "description": "Intelligently generate content summaries, save reading time"
+    },
+    "push": {
+      "title": "Instant Push",
+      "description": "Automated workflow distribution, timely delivery to users"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Daily News. All rights reserved."
+  }
+}

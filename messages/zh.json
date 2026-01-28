@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "关于",
+    "contact": "联系"
+  },
+  "hero": {
+    "title": "每日简报 -",
+    "titleHighlight": "AI",
+    "description": "发现人工智能领域的最新新闻和见解。保持更新，了解人工智能的最新发展和趋势。"
+  },
+  "subscribe": {
+    "placeholder": "输入您的邮箱",
+    "button": "订阅",
+    "loading": "订阅中..."
+  },
+  "features": {
+    "rss": {
+      "title": "RSS订阅",
+      "description": "集成多个RSS源，自动收集最新新闻"
+    },
+    "summary": {
+      "title": "AI总结",
+      "description": "智能生成内容摘要，节省阅读时间"
+    },
+    "push": {
+      "title": "即时推送",
+      "description": "工作流自动化分发，及时送达用户"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 日报。版权所有。"
+  }
+}
